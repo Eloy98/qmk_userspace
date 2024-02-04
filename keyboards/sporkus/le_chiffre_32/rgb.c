@@ -31,5 +31,21 @@ led_config_t g_led_config = {
     //  https://docs.qmk.fm/#/feature_rgb_matrix?id=flags
     { 8, 8, 2, 2, 2, 2, 2, 2, 2, 2, 2 }
 };
+bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+    for (uint8_t i = led_min; i < led_max; i++) {
+        switch(get_highest_layer(layer_state|default_layer_state)) {
+            case 2:
+                rgb_matrix_set_color(i, RGB_BLUE);
+                break;
+            case 1:
+                rgb_matrix_set_color(i, RGB_YELLOW);
+                break;
+            default:
+                break;
+        }
+    }
+    return false;
+}
+
 
 #endif
