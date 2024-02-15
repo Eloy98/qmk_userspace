@@ -8,6 +8,7 @@
         "pid": "0x0069",
         "device_version": "0.0.1"
     },
+    "oled":true,
     "processor": "STM32F072",
     "bootloader": "stm32-dfu",
     "diode_direction": "ROW2COL",
