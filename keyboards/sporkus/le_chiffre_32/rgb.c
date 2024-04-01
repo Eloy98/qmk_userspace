@@ -33,7 +33,7 @@ led_config_t g_led_config = {
 };
 
 // Layer and Mods indicator
-#define LED_CENTER_TOP 1
+#define LED_CENTER_TOP 2
 #define LED_CENTER_BOTTOM 0
 
 #define LAYER_R layer_colors[layer][0] *  RGB_INDICATOR_BRIGHTNESS / 255
