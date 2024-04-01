@@ -8,7 +8,6 @@
         "pid": "0x0069",
         "device_version": "0.0.1"
     },
-    "oled":true,
     "processor": "STM32F072",
     "bootloader": "stm32-dfu",
     "diode_direction": "ROW2COL",
@@ -118,5 +117,5 @@
                 { "matrix": [3, 7], "x": 9,    "y": 0,   "w": 1.25}
             ]
         }
-    }
+    },
 }
