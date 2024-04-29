@@ -13,9 +13,6 @@
 
 #define VIAL_KEYBOARD_UID {0xEA, 0xFA, 0x04, 0x88, 0x9B, 0x23, 0xD8, 0xFB}
 
-#define VIAL_UNLOCK_COMBO_ROWS {0, 0}
-#define VIAL_UNLOCK_COMBO_COLS {5, 6}
-
 /* Haptic feedback */
 #define DRV2605L_FB_ERM_LRA 0
 #define DRV2605L_FB_BRAKEFACTOR 3 // For 1x:0, 2x:1, 3x:2, 4x:3, 6x:4, 8x:5, 16x:6, Disable Braking:7
