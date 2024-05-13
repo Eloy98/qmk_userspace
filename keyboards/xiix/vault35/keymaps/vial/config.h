@@ -1,5 +1,0 @@
-#define DYNAMIC_KEYMAP_LAYER_COUNT 16
-
-/* Configuration for Vial */
-#define VIAL_KEYBOARD_UID \
-    { 0xE1, 0x09, 0xE4, 0x12, 0x56, 0x35, 0x1C, 0x7E }
