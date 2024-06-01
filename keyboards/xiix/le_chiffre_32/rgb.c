@@ -29,7 +29,7 @@ led_config_t g_led_config = {
     },
     //  LED Index to Flag
     //  https://docs.qmk.fm/#/feature_rgb_matrix?id=flags
-    { 8, 8, 2, 2, 2, 2, 2, 2, 2, 2, 2 }
+    { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 }
 };
 
 
