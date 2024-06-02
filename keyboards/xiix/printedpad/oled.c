@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include "printedpad.h"
-
+#include <stdio.h>
 /* oled显示屏部分， oled分辨率32*128px，旋转270° */
 /* 图案常量 */
 // layer 0 - 5 , 32*22 px
