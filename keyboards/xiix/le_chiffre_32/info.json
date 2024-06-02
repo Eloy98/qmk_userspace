@@ -13,7 +13,7 @@
     "diode_direction": "ROW2COL",
     "matrix_pins": {
         "cols": [ "B11", "B12", "B13", "B14", "B15", "C13", "C14", "C15", "F0", "F1" ],
-        "rows": ["A8", "B10", "B2", "B1"]
+        "rows": ["A8", "B10", "B2", "B2"]
     },
     "encoder": {
       "rotary": [

@@ -14,8 +14,8 @@
         "oled": true
     },
     "matrix_pins": {
-        "cols": ["B2", "B1", "B0"],
-        "rows": ["A10", "C9", "A8", "A9"]
+        "cols": ["B11", "B12", "B13"],
+        "rows": ["A8", "B10", "B2", "A9"]
     },
     "processor": "STM32F072",
     "url": "",
