@@ -3,7 +3,7 @@
     "keyboard_name": "Printed Pad",
     "maintainer": "noahbei",
     "bootloader": "stm32-dfu",
-    "diode_direction": "COL2ROW",
+    "diode_direction": "ROW2COL",
     "features": {
         "bootmagic": true,
         "command": false,
