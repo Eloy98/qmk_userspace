@@ -17,21 +17,21 @@
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [_QWERTY] = LAYOUT(
+    [0] = LAYOUT(
          KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,      KC_MUTE,     KC_Y,   KC_U,   KC_I,    KC_O,   KC_P,
          HM_A,   HM_S,   HM_D,   HM_F,   KC_G,                   KC_H,   HM_J,   HM_K,    HM_L,   HM_QUOT,
          HM_Z,   KC_X,   KC_C,   KC_V,   KC_B,                   KC_N,   KC_M,   KC_COMM, KC_DOT, HM_SLSH,
                    LT(1, KC_ESC),  LT(1,KC_SPC),                 LT(2,KC_SPC), LT(2, KC_BSPC)
     ),
 
-    [_FN] = LAYOUT(
+    [1] = LAYOUT(
          _______,  _______,  _______,  KC_SCLN,  _______,  _______,  KC_EQL,   KC_7,     KC_8,     KC_9,     KC_0,
          _______,  _______,  _______,  KC_COLN,  _______,            KC_MINS,  KC_4,     KC_5,     KC_6,     _______,
          _______,  _______,  _______,  _______,  _______,            KC_BSLS,  KC_1,     KC_2,     KC_3,     _______,
                                        _______,  KC_ENT,             KC_TAB,  _______
     ),
 
-    [_ADJ] = LAYOUT(
+    [2] = LAYOUT(
          _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,   KC_BSPC,   _______,    _______,
          _______,  _______,  _______,  _______,  _______,            KC_LEFT,  KC_DOWN,   KC_UP,     KC_LEFT,    _______,
          _______,  _______,  _______,  _______,  _______,            _______,  _______,   _______,   _______,    _______,
@@ -52,22 +52,6 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 bool oled_task_user(void) {
     // Host Keyboard Layer Status
     oled_write_P(PSTR("Layer: "), false);
-
-    switch (get_highest_layer(layer_state)) {
-        case _QWERTY:
-            oled_write_P(PSTR("Default\n"), false);
-            break;
-        case _FN:
-            oled_write_P(PSTR("FN\n"), false);
-            break;
-        case _ADJ:
-            oled_write_P(PSTR("ADJ\n"), false);
-            break;
-        default:
-            // Or use the write_ln shortcut over adding '\n' to the end of your string
-            oled_write_ln_P(PSTR("Undefined"), false);
-    }
-
     // Host Keyboard LED Status
     led_t led_state = host_keyboard_led_state();
     oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
