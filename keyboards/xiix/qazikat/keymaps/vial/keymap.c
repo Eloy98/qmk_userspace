@@ -32,6 +32,43 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 };
 
-const rgblight_segment_t PROGMEM my_capslock_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 3, HSV_RED}     
-);
+// const rgblight_segment_t PROGMEM my_capslock_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+//     {0, 3, HSV_RED}     
+// );
+
+const rgblight_segment_t PROGMEM _base_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+        {0, 3, HSV_BLUE}
+        );
+const rgblight_segment_t PROGMEM _middle_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+        {0, 3, HSV_GREEN}
+        );
+const rgblight_segment_t PROGMEM _top_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+        {0, 3, HSV_RED}
+        );
+
+const rgblight_segment_t* const PROGMEM _rgb_layers[] =
+RGBLIGHT_LAYERS_LIST(
+        _base_layer,
+        _middle_layer,
+        _top_layer
+        );
+
+void keyboard_post_init_user(void) {
+    rgblight_layers = _rgb_layers;
+}
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+
+    switch (get_highest_layer(state)) {
+        case 0:
+            rgblight_blink_layer(0, 500);
+            break;
+        case 1:
+            rgblight_blink_layer(1, 500);
+            break;
+        case 2:
+            rgblight_blink_layer(2, 500);
+            break;
+    }
+    return state;
+}
