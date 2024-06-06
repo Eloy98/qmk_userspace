@@ -31,3 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LGUI,    KC_LALT,    _______,    _______,  KC_SPC,   _______, _______,    KC_ENT,     _______,    _______,    KC_RALT,    KC_RGUI
     ),
 };
+
+const rgblight_segment_t PROGMEM my_capslock_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, 3, HSV_RED},       // Light 4 LEDs, starting with LED 6
+);

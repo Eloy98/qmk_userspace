@@ -23,3 +23,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VIAL_COMBO_ENTRIES 20
 #define VIAL_TAP_DANCE_ENTRIES 20
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
+
+#define RGBLIGHT_EFFECT_BREATHE_MAX 200
