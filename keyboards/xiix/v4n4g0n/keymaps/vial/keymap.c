@@ -35,4 +35,5 @@ bool rgb_matrix_indicators_kb(void) {
     } else {
         RGB_MATRIX_SET_COLOR(0, 0, 0, 0);
     }
+    return true;
 }
