@@ -26,14 +26,11 @@ led_config_t g_led_config = { {
   8, 8, 8
 } };
 
-bool rgb_matrix_indicators_kb(void) {
-    if (!rgb_matrix_indicators_user()) {
-        return false;
-    }
+bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     if (host_keyboard_led_state().caps_lock) {
-        RGB_MATRIX_SET_COLOR(0, 0, 255, 0); // assuming caps lock is at led #5
+        RGB_MATRIX_INDICATOR_SET_COLOR(0, 255, 255, 255); // assuming caps lock is at led #5
     } else {
-        RGB_MATRIX_SET_COLOR(0, 0, 0, 0);
+        RGB_MATRIX_INDICATOR_SET_COLOR(0, 0, 0, 0);
     }
-    return true;
+    return false;
 }
