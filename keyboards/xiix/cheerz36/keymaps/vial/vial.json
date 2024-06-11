@@ -6,7 +6,7 @@
     },
     "layouts": {
         "labels": [
-            ["Space","Split Left","Split Right"]
+            ["Split Left Space","Split Right Space"]
           ],
         "keymap":
         [
