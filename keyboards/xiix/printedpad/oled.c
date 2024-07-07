@@ -136,7 +136,7 @@ void render_lock_state(void) {
 
 
 //	屏幕旋转270°
-oled_rotation_t oled_init_user(oled_rotation_t rotation) { return OLED_ROTATION_270; }
+oled_rotation_t oled_init_user(oled_rotation_t rotation) { return OLED_ROTATION_90; }
 
 //	wpm加载
 void render_wpm(void) {
