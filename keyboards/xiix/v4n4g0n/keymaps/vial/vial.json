@@ -2,7 +2,7 @@
     "vial": {
       "midi": "advanced"  
             },
-    "lighting": "vial_rgb",
+    "lighting": "vialrgb",
     "matrix": {
         "rows": 5,
         "cols": 12
