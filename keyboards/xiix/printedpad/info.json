@@ -13,6 +13,7 @@
         "extrakey": true,
         "mousekey": true,
         "nkro": true,
+        "encoder": true,
         "oled": true
     },
     "bootmagic": {
