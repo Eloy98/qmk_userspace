@@ -77,7 +77,7 @@
 #define DRIVER_LED_TOTAL RGB_MATRIX_LED_COUNT
 
 // Use this option if front leds are not installed and are bypassed with solder jumper
-#define FRONT_LEDS_BYPASS
+// #define FRONT_LEDS_BYPASS
 #ifdef FRONT_LED_BYPASS
     #undef RGB_MATRIX_LED_COUNT
     #define RGB_MATRIX_LED_COUNT 9
